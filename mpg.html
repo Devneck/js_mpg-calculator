@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<!--
+		Name:					Sean Glover
+		Class:					CIS 114 - JavaScript/jQuery
+		Assignment:	Lesson 01 - mpg.html
+		Due: 						4/10/13
+	-->
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<title>Calculate Miles Per Gallon</title>
+	
+     <script type="text/javascript" language="javascript">
+	
+		//	<![CDATA[       
+			// declare variables
+			var miles;
+			var gallons;
+			
+			// loop to validate miles entered by user is valid
+			do {
+				// initialize miles variable from prompt
+				miles = parseFloat(prompt("Enter miles driven", ""));
+				
+				if (miles > 0) {
+					break // break from loop when entry is valid
+				} else {
+					// alert user miles entry is not valid
+					alert("That is not an valid entry!");
+				}
+			} while (true)
+			
+			// loop to validate gallons entered by user is valid
+			do {
+				// initialize gallons variable from prompt
+				gallons = parseFloat(prompt("Enter gallons of gas used", ""));
+				
+				if (gallons > 0) {
+					break // break from loop when entry is valid
+				} else {
+					// alert user gallons entry is not valid
+					alert("That is not a valid entry!");
+				}
+			} while (true)
+			
+			// declare and initialize mpg based on calculation from user entered values
+			var mpg = miles/gallons;
+			mpg = parseInt(mpg);
+			
+			// alert user of miles per gallon used
+			alert("Miles per gallon = " + mpg);
+		
+		//	]]>
+    </script>
+</head>
+
+<body>
+   <h1>This page is displayed after the JavaScript is executed</h1>
+</body>
+</html>
